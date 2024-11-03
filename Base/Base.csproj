@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{584BA133-1274-4C29-815D-6754B104442B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Base</RootNamespace>
+    <AssemblyName>Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BCS16A.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HZH_Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HZH_Controls.1.0.14\lib\net40\HZH_Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="libs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\libs.dll</HintPath>
+    </Reference>
+    <Reference Include="LicenseActivation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LicenseActivation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Model">
+      <HintPath>..\Model\bin\Debug\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RecXF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RecXF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\MenuSetCalibration\MenuCalCurveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuCalCurveForm.Designer.cs">
+      <DependentUpon>MenuCalCurveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCorrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCorrForm.Designer.cs">
+      <DependentUpon>MenuSetCorrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaCANopenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaCANopenForm.Designer.cs">
+      <DependentUpon>MenuParaCANopenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaModbusTCPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaModbusTCPForm.Designer.cs">
+      <DependentUpon>MenuParaModbusTCPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaWirelessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaWirelessForm.Designer.cs">
+      <DependentUpon>MenuParaWirelessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacAutoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacAutoForm.Designer.cs">
+      <DependentUpon>MenuFacAutoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacManualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacManualForm.Designer.cs">
+      <DependentUpon>MenuFacManualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuToolCom\MenuToolRS485Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuToolCom\MenuToolRS485Form.Designer.cs">
+      <DependentUpon>MenuToolRS485Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MeasureDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MeasureDevice.Designer.cs">
+      <DependentUpon>MeasureDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MenuSetCalibration\MenuCalScopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuCalScopeForm.Designer.cs">
+      <DependentUpon>MenuCalScopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuHelp\MenuAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuHelp\MenuAboutBox.Designer.cs">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuFiles\MenuAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuFiles\MenuAccountForm.Designer.cs">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCalForm.Designer.cs">
+      <DependentUpon>MenuSetCalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCheatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetCheatingForm.Designer.cs">
+      <DependentUpon>MenuSetCheatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuFacUserForm.Designer.cs">
+      <DependentUpon>MenuFacUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolEepromCfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolEepromCfg.Designer.cs">
+      <DependentUpon>MenuToolEepromCfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuToolLog\MenuToolLogReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuToolLog\MenuToolLogReview.Designer.cs">
+      <DependentUpon>MenuToolLogReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTool\MenuModelSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTool\MenuModelSelect.Designer.cs">
+      <DependentUpon>MenuModelSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSet\MenuConnectForm.Designer.cs">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolParExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolParExport.Designer.cs">
+      <DependentUpon>MenuToolParExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolParImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuToolConfig\MenuToolParImport.Designer.cs">
+      <DependentUpon>MenuToolParImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\IPAddrTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\IPAddrTextbox.Designer.cs">
+      <DependentUpon>IPAddrTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\LimitedSelectionListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\RTUDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RTUDevice.Designer.cs">
+      <DependentUpon>RTUDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MT2X420Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MT2X420Device.Designer.cs">
+      <DependentUpon>MT2X420Device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MultipleDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MultipleDevice.Designer.cs">
+      <DependentUpon>MultipleDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\DoubleBufferListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\MutiDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\MutiDevice.Designer.cs">
+      <DependentUpon>MutiDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetParaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetParaForm.Designer.cs">
+      <DependentUpon>MenuSetParaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCalibration\MenuSetFilterForm.Designer.cs">
+      <DependentUpon>MenuSetFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaRS485Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuSetCommunication\MenuParaRS485Form.Designer.cs">
+      <DependentUpon>MenuParaRS485Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\MutiDevice485.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\MyControl\MutiDevice485.Designer.cs">
+      <DependentUpon>MutiDevice485.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\language.zh.resx" />
+    <EmbeddedResource Include="Properties\language.en.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuCalCurveForm.resx">
+      <DependentUpon>MenuCalCurveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCheatingForm.en.resx">
+      <DependentUpon>MenuSetCheatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCorrForm.en.resx">
+      <DependentUpon>MenuSetCorrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCorrForm.resx">
+      <DependentUpon>MenuSetCorrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaCANopenForm.en.resx">
+      <DependentUpon>MenuParaCANopenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaCANopenForm.resx">
+      <DependentUpon>MenuParaCANopenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaModbusTCPForm.resx">
+      <DependentUpon>MenuParaModbusTCPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaWirelessForm.resx">
+      <DependentUpon>MenuParaWirelessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacAutoForm.en.resx">
+      <DependentUpon>MenuFacAutoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacAutoForm.resx">
+      <DependentUpon>MenuFacAutoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacManualForm.en.resx">
+      <DependentUpon>MenuFacManualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacManualForm.resx">
+      <DependentUpon>MenuFacManualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolCom\MenuToolRS485Form.en.resx">
+      <DependentUpon>MenuToolRS485Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolCom\MenuToolRS485Form.resx">
+      <DependentUpon>MenuToolRS485Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MeasureDevice.en.resx">
+      <DependentUpon>MeasureDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MeasureDevice.resx">
+      <DependentUpon>MeasureDevice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuCalScopeForm.en.resx">
+      <DependentUpon>MenuCalScopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuCalScopeForm.resx">
+      <DependentUpon>MenuCalScopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuHelp\MenuAboutBox.en.resx">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuHelp\MenuAboutBox.resx">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuFiles\MenuAccountForm.en.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuFiles\MenuAccountForm.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCalForm.en.resx">
+      <DependentUpon>MenuSetCalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCalForm.resx">
+      <DependentUpon>MenuSetCalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetCheatingForm.resx">
+      <DependentUpon>MenuSetCheatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacUserForm.en.resx">
+      <DependentUpon>MenuFacUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolEepromCfg.en.resx">
+      <DependentUpon>MenuToolEepromCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolEepromCfg.resx">
+      <DependentUpon>MenuToolEepromCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolParExport.en.resx">
+      <DependentUpon>MenuToolParExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolParImport.en.resx">
+      <DependentUpon>MenuToolParImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolLog\MenuToolLogReview.en.resx">
+      <DependentUpon>MenuToolLogReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolLog\MenuToolLogReview.resx">
+      <DependentUpon>MenuToolLogReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTool\MenuModelSelect.en.resx">
+      <DependentUpon>MenuModelSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTool\MenuModelSelect.resx">
+      <DependentUpon>MenuModelSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuFacUserForm.resx">
+      <DependentUpon>MenuFacUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuConnectForm.en.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSet\MenuConnectForm.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolParExport.resx">
+      <DependentUpon>MenuToolParExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuToolConfig\MenuToolParImport.resx">
+      <DependentUpon>MenuToolParImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MultipleDevice.en.resx">
+      <DependentUpon>MultipleDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MyControl\MutiDevice.en.resx">
+      <DependentUpon>MutiDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RTUDevice.resx">
+      <DependentUpon>RTUDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MT2X420Device.resx">
+      <DependentUpon>MT2X420Device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MultipleDevice.resx">
+      <DependentUpon>MultipleDevice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MyControl\MutiDevice.resx">
+      <DependentUpon>MutiDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetParaForm.en.resx">
+      <DependentUpon>MenuSetParaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetParaForm.resx">
+      <DependentUpon>MenuSetParaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetFilterForm.en.resx">
+      <DependentUpon>MenuSetFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCalibration\MenuSetFilterForm.resx">
+      <DependentUpon>MenuSetFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaRS485Form.en.resx">
+      <DependentUpon>MenuParaRS485Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuSetCommunication\MenuParaRS485Form.resx">
+      <DependentUpon>MenuParaRS485Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MyControl\MutiDevice485.resx">
+      <DependentUpon>MutiDevice485.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS16A.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE05AH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE10AH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE20AH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE30AH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE420L.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE510L.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BE600L.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BS420H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BS600H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iBus.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T420.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TD485.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TDES.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TDES-420.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TDSS.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TNP10.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS16B.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BCS16A.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DMM6500\DMM6500.csproj">
+      <Project>{d6bea27e-4085-42d4-bee4-6868273ca886}</Project>
+      <Name>DMM6500</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5EDD2E00-CA50-441C-81E5-8ADD35D20143}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tooling\Tooling.csproj">
+      <Project>{f705d75b-388c-4c08-8579-de9551ac947c}</Project>
+      <Name>Tooling</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
